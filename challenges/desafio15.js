@@ -1,8 +1,8 @@
 // Adicione o campo avaliacao em todos os documentos da coleção e efetue alterações nesse campo
 
 db.produtos.updateMany({}, {
-    $set: {avaliacao: NumberInt(0)}
-})
+    $set: { avaliacao: NumberInt(0) },
+});
 
 db.produtos.updateMany(
     {
@@ -25,5 +25,5 @@ db.produtos.updateMany(
 db.produtos.find({}, {
     nome: true,
     avaliacao: true,
-    _id: false
-})
+    _id: false,
+});
