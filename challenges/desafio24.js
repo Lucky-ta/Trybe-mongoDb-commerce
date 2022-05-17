@@ -2,9 +2,9 @@ db.produtos.updateMany({}, {
     $push: {
         valoresNutricionais: {
             $each: [],
-            $sort: { percentual: -1 }
-        }
-    }
-})
+            $sort: { percentual: -1 },
+        },
+    },
+});
 
-db.produtos.find({ }, { nome: true, valoresNutricionais: true, _id: false })
+db.produtos.find({ }, { nome: true, valoresNutricionais: true, _id: false });
